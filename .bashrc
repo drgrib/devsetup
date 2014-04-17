@@ -48,3 +48,6 @@ GRN=`tput setaf 2`
 BLU=`tput setaf 4`
 
 PS1='\n\r${BLD}\u${NRM}|${UL}\h${NRM} [${BLD}${BLU}\W${NRM}] \n>> '
+
+
+export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
