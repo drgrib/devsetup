@@ -1,6 +1,7 @@
 #!/bin/sh
 #Use this to add packages to your machine when running wu_setup_dev
 
-cd gribserver
+cd /code/ingest/grib/gribserver
 make
 make install
+
