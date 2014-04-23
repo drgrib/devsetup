@@ -1,2 +1,6 @@
 #!/bin/sh
 #Use this to add packages to your machine when running wu_setup_dev
+
+cd gribserver
+make
+make install
