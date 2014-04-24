@@ -12,9 +12,6 @@ make
 make install
 
 # Install Python 2.7.6
-# Prerequisites
-yum groupinstall "Development tools"
-yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
 # Interpreter
 cd /code/py
 wget http://python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz --no-check-certificate
