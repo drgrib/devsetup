@@ -1,27 +1,27 @@
 #!/bin/sh
 #Use this to add packages to your machine when running wu_setup_dev
 
-# Install CPP11
+# Install C++11
 cd /etc/yum.repos.d
 wget http://people.centos.org/tru/devtools-1.1/devtools-1.1.repo 
 yum --enablerepo=testing-1.1-devtools-6 install devtoolset-1.1-gcc devtoolset-1.1-gcc-c++
 
-# Make and install gribserver programs
-cd /code/ingest/grib/gribserver
-make
-make install
-
 # Install Python 2.7.6
-# Interpreter
+# install interpreter
 cd /code/py
 wget http://python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz --no-check-certificate
 tar xf Python-2.7.6.tar.xz
 cd Python-2.7.6
 ./configure --prefix=/usr/local --enable-unicode=ucs4 --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
 make && make altinstall
-# pip
+# install pip (python module management)
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 python2.7 ez_setup.py
 easy_install-2.7 pip
-# necessary modules
+# install necessary modules
 pip2.7 install requests
+
+# Make and install gribserver programs
+cd /code/ingest/grib/gribserver
+make
+make install
