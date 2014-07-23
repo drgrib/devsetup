@@ -6,6 +6,18 @@ cd /etc/yum.repos.d
 wget http://people.centos.org/tru/devtools-1.1/devtools-1.1.repo 
 yum --enablerepo=testing-1.1-devtools-6 --skip-broken install devtoolset-1.1-gcc devtoolset-1.1-gcc-c++
 
+# Install rapidfire support
+yum install openldap-devel
+
+#upgrade to ZeroMQ/3.2.2
+yum remove -y zeromq zeromq-devel
+wget http://download.zeromq.org/zeromq-3.2.2.tar.gz
+tar zxvf zeromq-3.2.2.tar.gz && cd zeromq-3.2.2
+./configure
+make && make install
+cp /usr/local/lib/libzmq* /usr/lib64/
+
+
 # Install Python 2.7.6
 # install interpreter
 cd /code/py
@@ -20,6 +32,7 @@ python2.7 ez_setup.py
 easy_install-2.7 pip
 # install necessary modules
 pip2.7 install requests
+pip2.7 install progressbar
 
 # Make and install gribserver programs
 cd /code/ingest/grib/gribserver
