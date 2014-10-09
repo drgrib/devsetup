@@ -38,16 +38,17 @@ export PATH
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# Prompt
-NRM=`tput sgr0`
-BLD=`tput bold`
-ITL=`tput sitm`
-UL=`tput smul`
-RED=`tput setaf 1`
-GRN=`tput setaf 2`
-BLU=`tput setaf 4`
-
-PS1='\n\r${BLD}\u${NRM}|${UL}\h${NRM} [${BLD}${BLU}\W${NRM}] \w \n>> '
-
+if [[ $- == *i* ]]
+then
+	# Prompt
+	NRM=`tput sgr0`
+	BLD=`tput bold`
+	ITL=`tput sitm`
+	UL=`tput smul`
+	RED=`tput setaf 1`
+	GRN=`tput setaf 2`
+	BLU=`tput setaf 4`
+	PS1='\n\r${BLD}\u${NRM}|${UL}\h${NRM} [${BLD}${BLU}\W${NRM}] \w \n>> '
+fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
