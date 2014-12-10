@@ -37,6 +37,7 @@ pip2.7 install requests
 pip2.7 install progressbar
 pip2.7 install simplemysql
 pip2.7 install jenkinsapi
+pip2.7 install redis
 # delete unneeded python installation files
 cd /code/py/
 rm -rf /code/py/Python-2.7.6
