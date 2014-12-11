@@ -39,8 +39,8 @@ export PATH
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
 function __set_ps1 {
-     L2='${RED}\w${NRM}\n'
-     # Only output L2 if directory is not ~ or / 
+     L2='${YLW}\w${NRM}\n'
+     # Only output L2 if directory is not ~ or /
      DIR=${PWD}
      if [ "${DIR}" == "${HOME}" ] || [ "${DIR}" == "/" ]
      then
@@ -64,11 +64,11 @@ then
      BLU=`tput setaf 4`
      # Prompt Assembly
      TITLE='${BLD}\u${NRM}|${UL}\h${NRM}'
-     DIR='[${BLD}${YLW}\W${NRM}]'
+     DIR='[${BLD}${RED}\W${NRM}]'
      TIME='\@'
      L1=$TITLE' '$DIR' '$TIME'\n'
      L3='>> '
-     PROMPT_COMMAND='__set_ps1'  
+     PROMPT_COMMAND='__set_ps1' 
 fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
