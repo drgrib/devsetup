@@ -38,6 +38,18 @@ export PATH
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
+function __set_ps1 {
+     L2='${RED}\w${NRM}\n'
+     # Only output L2 if directory is not ~ or / 
+     DIR=${PWD}
+     if [ $DIR == $HOME ] || [ $DIR == '/' ]
+     then
+          L2=''
+     fi
+     # Set final PS1
+     PS1='\n'$L1$L2$L3
+}
+
 if [[ $- == *i* ]]
 then
      export TZ="/usr/share/zoneinfo/US/Pacific"
@@ -54,10 +66,9 @@ then
      TITLE='${BLD}\u${NRM}|${UL}\h${NRM}'
      DIR='[${BLD}${YLW}\W${NRM}]'
      TIME='\@'
-     L1='\n'$TITLE' '$DIR' '$TIME'\n'
-     L2='${RED}\w${NRM}\n'
+     L1=$TITLE' '$DIR' '$TIME'\n'
      L3='>> '
-     PS1=$L1$L2$L3
+     PROMPT_COMMAND='__set_ps1'  
 fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
