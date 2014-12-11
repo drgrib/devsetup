@@ -40,7 +40,8 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 if [[ $- == *i* ]]
 then
-     # Prompt
+     export TZ="/usr/share/zoneinfo/US/Pacific"
+     # Format Specifications
      NRM=`tput sgr0`
      BLD=`tput bold`
      ITL=`tput sitm`
@@ -49,7 +50,14 @@ then
      GRN=`tput setaf 2`
      YLW=`tput setaf 3`
      BLU=`tput setaf 4`
-     PS1='\n\r${BLD}\u${NRM}|${UL}\h${NRM} [${BLD}${YLW}\W${NRM}] \n${RED}\w${NRM} \n>> '
+     # Prompt Assembly
+     TITLE='${BLD}\u${NRM}|${UL}\h${NRM}'
+     DIR='[${BLD}${YLW}\W${NRM}]'
+     TIME='\@'
+     L1='\n'$TITLE' '$DIR' '$TIME'\n'
+     L2='${RED}\w${NRM}\n'
+     L3='>> '
+     PS1=$L1$L2$L3
 fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
