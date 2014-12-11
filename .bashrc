@@ -42,7 +42,7 @@ function __set_ps1 {
      L2='${RED}\w${NRM}\n'
      # Only output L2 if directory is not ~ or / 
      DIR=${PWD}
-     if [ $DIR == $HOME ] || [ $DIR == '/' ]
+     if [ "${DIR}" == "${HOME}" ] || [ "${DIR}" == "/" ]
      then
           L2=''
      fi
