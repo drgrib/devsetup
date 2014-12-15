@@ -39,7 +39,7 @@ export PATH
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
 function __set_ps1 {
-     L2='${YLW}\w${NRM}\n'
+     L2='${CYN}\w${NRM}\n'
      # Only output L2 if directory is not ~ or /
      DIR=${PWD}
      if [ "${DIR}" == "${HOME}" ] || [ "${DIR}" == "/" ]
@@ -62,9 +62,12 @@ then
      GRN=`tput setaf 2`
      YLW=`tput setaf 3`
      BLU=`tput setaf 4`
+     CYN=`tput setaf 6`
+     WHT=`tput setaf 7`
+     GRY=`tput setaf 8`
      # Prompt Assembly
      TITLE='${BLD}\u${NRM}|${UL}\h${NRM}'
-     DIR='[${BLD}${RED}\W${NRM}]'
+     DIR='[${BLD}${YLW}\W${NRM}]'
      TIME='\@'
      L1=$TITLE' '$DIR' '$TIME'\n'
      L3='>> '
