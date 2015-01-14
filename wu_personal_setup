@@ -17,7 +17,6 @@ tar zxvf zeromq-3.2.2.tar.gz && cd zeromq-3.2.2
 make && make install
 cp /usr/local/lib/libzmq* /usr/lib64/
 
-
 # Install Python 2.7.6
 # install interpreter
 cd /code/py
@@ -43,7 +42,5 @@ cd /code/py/
 rm -rf /code/py/Python-2.7.6
 rm -rf /code/py/Python-2.7.6.tar.xz*
 
-# Make and install gribserver programs
-cd /code/ingest/grib/gribserver
-make
-make install
+# Install NPM
+yum install npm
