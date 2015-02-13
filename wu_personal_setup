@@ -38,6 +38,7 @@ pip2.7 install simplemysql
 pip2.7 install jenkinsapi
 pip2.7 install redis
 pip2.7 install bunch
+pip2.7 install numpy
 # delete unneeded python installation files
 cd /code/py/
 rm -rf /code/py/Python-2.7.6
