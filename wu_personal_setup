@@ -33,7 +33,7 @@ python2.7 ez_setup.py
 easy_install-2.7 pip
 # install necessary modules
 pip2.7 install requests
-pip2.7 install progressbar
+pip2.7 install -I progressbar==2.2
 pip2.7 install simplemysql
 pip2.7 install jenkinsapi
 pip2.7 install redis
