@@ -42,6 +42,7 @@ pip2.7 install numpy
 pip2.7 install pymongo
 pip2.7 install cluster
 pip2.7 install tzlocal
+pip2.7 install frozendict
 # delete unneeded python installation files
 cd /code/py/
 rm -rf /code/py/Python-2.7.6
