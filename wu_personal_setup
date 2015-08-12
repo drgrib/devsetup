@@ -37,7 +37,7 @@ pip2.7 install -I progressbar==2.2
 pip2.7 install simplemysql
 pip2.7 install jenkinsapi
 pip2.7 install redis
-pip2.7 install bunch
+pip2.7 install dotmap
 pip2.7 install numpy
 pip2.7 install pymongo
 pip2.7 install cluster
