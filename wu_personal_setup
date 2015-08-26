@@ -43,6 +43,7 @@ pip2.7 install pymongo
 pip2.7 install cluster
 pip2.7 install tzlocal
 pip2.7 install frozendict
+pip2.7 install BeautifulSoup4
 # delete unneeded python installation files
 cd /code/py/
 rm -rf /code/py/Python-2.7.6
