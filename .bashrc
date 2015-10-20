@@ -75,3 +75,5 @@ then
 fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
+
+cd /code/ingest/WXSTN/quality_control
