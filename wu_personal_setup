@@ -42,7 +42,7 @@ pip2.7 install numpy
 pip2.7 install pymongo
 pip2.7 install cluster
 pip2.7 install tzlocal
-pip2.7 install dateutil
+pip2.7 install python-dateutil
 pip2.7 install frozendict
 pip2.7 install BeautifulSoup4
 pip2.7 install simplemysql
