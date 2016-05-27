@@ -75,5 +75,9 @@ then
 fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
+export PYTHONPATH=$HOME/toolkits/com.ibm.streamsx.topology/opt/python/packages:$PYTHONPATH
+
+alias st="streamtool"
+
 
 cd /code/ingest/WXSTN/quality_control
