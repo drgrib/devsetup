@@ -52,6 +52,38 @@ cd /code/py/
 rm -rf /code/py/Python-2.7.6
 rm -rf /code/py/Python-2.7.6.tar.xz*
 
+# Install Python 3
+# install interpreter
+cd /code/py
+wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tar.xz --no-check-certificate
+tar xf Python-3.5.1.tar.xz
+cd Python-3.5.1
+yum install openssl
+yum install openssl-devel
+./configure --enable-shared --prefix=/usr --with-ensurepip=install
+make install
+ln -s /usr/lib/libpython3.5m.so.1.0 /usr/lib64/libpython3.5m.so.1.0
+# install necessary modules
+pip3 install dotmap
+pip3 install six
+pip3 install modernize
+pip3 install pycrypto
+pip3 install python-dateutil
+pip3 install tzlocal
+pip3 install requests
+pip3 install bs4
+pip3 install pymongo
+pip3 install numpy
+pip3 install redis
+pip3 install jenkinsapi
+pip3 install sh
+pip3 install pygal
+pip3 install scipy
+# delete unneeded python installation files
+cd /code/py/
+rm -rf /code/py/Python-3.5.1
+rm -rf /code/py/Python-3.5.1.tar.xz*
+
 # Install NPM
 yum install npm
 
