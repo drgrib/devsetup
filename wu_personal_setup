@@ -28,8 +28,7 @@ yum install openssl-devel
 ./configure --prefix=/usr/local --enable-unicode=ucs4 --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
 make && make altinstall
 # install pip (python module management)
-wget https://bootstrap.pypa.io/ez_setup.py -O - | python
-python2.7 ez_setup.py
+wget https://bootstrap.pypa.io/ez_setup.py -O - | python2.7
 easy_install-2.7 pip
 # install necessary modules
 pip2.7 install requests
