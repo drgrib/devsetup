@@ -79,6 +79,7 @@ pip3 install sh
 pip3 install pygal
 python3 -m pip install --upgrade pip
 pip3 install scipy
+pip3 install plotly
 # delete unneeded python installation files
 cd /code/py/
 rm -rf /code/py/Python-3.5.1
