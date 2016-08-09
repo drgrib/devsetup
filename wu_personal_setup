@@ -77,6 +77,7 @@ pip3 install redis
 pip3 install jenkinsapi
 pip3 install sh
 pip3 install pygal
+python3 -m pip install --upgrade pip
 pip3 install scipy
 # delete unneeded python installation files
 cd /code/py/
