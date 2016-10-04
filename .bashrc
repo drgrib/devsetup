@@ -75,9 +75,10 @@ then
 fi
 
 export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
-export PYTHONPATH=$HOME/toolkits/com.ibm.streamsx.topology/opt/python/packages:$PYTHONPATH
+#export PYTHONPATH=$HOME/toolkits/com.ibm.streamsx.topology/opt/python/packages:$PYTHONPATH
 # Set up streams
 export STREAMS_INSTALL=/efs/prod/tmp/chris/opt/ibm/InfoSphere_Streams/4.2.0.0
+export PYTHONPATH=$STREAMS_INSTALL/toolkits/com.ibm.streamsx.topology/opt/python/packages
 source /efs/prod/tmp/chris/opt/ibm/InfoSphere_Streams/4.2.0.0/bin/streamsprofile.sh
 
 alias st=streamtool
