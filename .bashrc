@@ -84,4 +84,4 @@ export GOPATH=/code/go
 
 alias st=streamtool
 
-cd /code/ingest/WXSTN/quality_control
+cd /code/ingest/WXSTN/quality_control/streams
