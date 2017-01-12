@@ -81,6 +81,7 @@ export STREAMS_INSTALL=/efs/prod/tmp/chris/opt/ibm/InfoSphere_Streams/4.2.0.0
 export PYTHONPATH=$STREAMS_INSTALL/toolkits/com.ibm.streamsx.topology/opt/python/packages
 source /efs/prod/tmp/chris/opt/ibm/InfoSphere_Streams/4.2.0.0/bin/streamsprofile.sh
 export GOPATH=/code/go
+export PATH=$PATH:$GOPATH/bin
 
 alias st=streamtool
 
